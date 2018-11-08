@@ -1,0 +1,53 @@
+
+.header, nameSection{
+    text-align: center;
+    margin-top:30px;
+    color: #009ba1;
+}
+
+.instructionsAndGuidelines{
+    background: #009ba1;
+    width:100%;
+    margin:none;
+    color:white;
+}
+
+.instructions h3{
+    text-align: center;
+}
+.guidlines h3{
+    text-align: center;
+}
+
+.nameSection{
+    margin-top:15px;
+    background: #009ba1;
+    width:100%;
+    margin:none;
+    color:white;
+    text-align: center;
+    padding-bottom: 15px;
+    
+}
+.nameSection input{
+    width:50%;
+    margin:auto;
+    -webkit-box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
+    box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
+}
+.nameSection button{
+    -webkit-box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
+    box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
+}
+
+.dropzoneSection{
+    margin-top:15px;
+    margin-left:100px;
+    margin-right:100px;
+}
+.dropzoneSection h3{
+    text-align: center;
+    color: #009ba1;
+}
