@@ -15,11 +15,9 @@
 .instructions h3{
     text-align: center;
 }
-
-ol,ul{
-    font-size: 150%;
+.guidlines h3{
+    text-align: center;
 }
-
 
 .nameSection{
     margin-top:15px;
@@ -44,17 +42,6 @@ ol,ul{
     box-shadow: 6px 6px 5px -1px rgba(0,0,0,0.25);
 }
 
-.nameLabel{
-    font-size: 2rem;
-    margin-top:10px;
-}
-
-.nameInput{
-    width: 400px;
-    height: 50px;
-    font-size: 3rem;
-}
-
 .dropzoneSection{
     margin-top:15px;
     margin-left:100px;
@@ -64,15 +51,6 @@ ol,ul{
     text-align: center;
     color: #009ba1;
 }
-
-.uploadButton{
-    width: 200px;
-    height: 75px;
-    font-size: 3rem;
-}
-
 .previewArea{
     background:#009ba1;
-    padding-top: 15px;
-    color:white;
 }

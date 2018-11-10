@@ -3,7 +3,6 @@
 session_start();
 
 $folder_name = 'upload/';
-$output = '';
 
 if (isset($_SESSION['name'])){
 
@@ -17,7 +16,6 @@ if (isset($_SESSION['name'])){
     echo "Named folder was created";
     } 
         
-    $folder_name .= $name.'/';
         
      $temp_file = $_FILES['file']['tmp_name'];
      $location = $folder_name . $_FILES['file']['name'];
@@ -31,11 +29,9 @@ if (isset($_SESSION['name'])){
     }
 
     $result = array();
-    
-    $files = array();
-    if(file_exists("upload/$name")){
-        $files = scandir('upload/'.$name);
-    }
+
+    $files = scandir('upload');
+
     $output = '<div class="row">';
 
     if(false !== $files)
@@ -46,8 +42,8 @@ if (isset($_SESSION['name'])){
       {
        $output .= '
        <div class="col-md-2">
-        <img src="'.$folder_name.$name.'/'.$file.'" class="img-thumbnail" width="175" height="175" style="height:175px;" />
-        <button type="button" style="color:white;" class="btn btn-link remove_image" id="'.$name.'/'.$file.'">Remove</button>
+        <img src="'.$folder_name.$file.'" class="img-thumbnail" width="175" height="175" style="height:175px;" />
+        <button type="button" class="btn btn-link remove_image" id="'.$file.'">Remove</button>
        </div>
        ';
       }

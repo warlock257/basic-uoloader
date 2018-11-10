@@ -3,7 +3,6 @@
 session_start();
 
 $folder_name = 'upload/';
-$output = '';
 
 if (isset($_SESSION['name'])){
 
@@ -47,7 +46,7 @@ if (isset($_SESSION['name'])){
        $output .= '
        <div class="col-md-2">
         <img src="'.$folder_name.$name.'/'.$file.'" class="img-thumbnail" width="175" height="175" style="height:175px;" />
-        <button type="button" style="color:white;" class="btn btn-link remove_image" id="'.$name.'/'.$file.'">Remove</button>
+        <button type="button" class="btn btn-link remove_image" id="'.$file.'">Remove</button>
        </div>
        ';
       }

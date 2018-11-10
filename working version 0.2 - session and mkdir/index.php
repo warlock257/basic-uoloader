@@ -3,9 +3,6 @@
 session_start();
 ?>
 
-<!--Created by David Courtemanche-->
-<!--Help from this tutorial:  https://www.youtube.com/watch?v=J90EPfHvb-8    -->
-
 <!DOCTYPE html>
 <html>
  <head>
@@ -31,39 +28,35 @@ session_start();
         <h1>Photo / Video upload</h1>
     </div>
      
-         <div class="instructionsAndGuidelines">
+             <div class="instructionsAndGuidelines">
             <div class="row">
-                <div class="col-md-3 guidlines"></div>
                 <div class="col-md-6 instructions">
-                <h3><u>Instructions</u></h3>
-                    <ol>
+                <h3>Instructions</h3>
+                    <ul>
                         <li>Enter your <strong>last name</strong> in the field below</li>
                         <li>Click "Set Name"</li>
                         <li>If you are returning from a previous session, make sure the name is consistant</li>
-                        <li>Make sure you see your name below before uploading </li>
-                        <li>Click or drag your files into the temperary box</li>
-                        <li>Click <strong>Upload</strong>. Multiple presses may be nessessary</li>
-                        <li>When images appear in the lowest section, they have been recived by us</li>
-                    </ol>
-                    
-                    <h3><u>Guidelines</u></h3>
+                        <li>Make you see your name below before uploading </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 guidlines">
+                    <h3>Guidelines</h3>
                     <ul>
-                        <li>Our software will only read the order of pictures by it’s 
+                        <li>-Our software will only read the order of pictures by it’s 
                         filename. Ordering in programs like Apple Photos will not
                         translate over to our system</li>
-                        <li>Ideally, the file names should have a catagoy and number:<br>
+                        <li>-Ideally, the file names should have a catagoy and number:<br>
                        family001.jpg, Chrono002, friends003.jpg, etc</li>
                     </ul>
                 </div>
-                <div class="col-md-3"></div>
             </div>
         </div>
      
              <div class="nameSection">
         
         <form>
-            <label for="name" class="nameLabel">Last Name</label>
-            <input type="text" name="name" class="form-control nameInput" id="name" placeholder="Enter last name here">
+            <label for="name">Last Name</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Enter name here">
             
             <br>
             <button class="btn btn-primary">Set Name</button>
@@ -89,7 +82,7 @@ session_start();
      
   <div class="container">
    <br />
-   <h3 align="center"> Drag files into the temporary box below, or click it, then hit upload</h3>
+   <h3 align="center">Select files in temporary box, then hit upload</h3>
    <br />
    
    <form action="upload.php" class="dropzone" id="dropzoneFrom">
@@ -101,24 +94,12 @@ session_start();
    <br />
    <br />
    <div align="center">
-    <button type="button" class="btn btn-info uploadButton" id="submit-all">Upload</button>
+    <button type="button" class="btn btn-info" id="submit-all">Upload</button>
    </div>
    <br />
    <br />
       <div class="previewArea">
-          
-          <h3 align="center">
-              <?php 
-                if(isset($_GET['name'])){
-                    $subdir = $_GET['name'].'/';
-                    $dir = "upload/";
-                    $files = scandir($dir.$subdir);
-                    $numFiles = count($files)-2;
-                    echo "Number of files received: ".$numFiles;
-                }
-              ?>
-          </h3>
-          
+          <h3 align="center">Files recived:</h3>
            <div id="preview"></div>
            <br />
            <br />
